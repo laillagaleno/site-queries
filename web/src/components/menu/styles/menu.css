@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    padding: 1.2rem 8rem;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    border-bottom: 0.1rem solid var(--yellow-400) ;
+
+}
+
+img{
+    width: auto;
+    height: 4rem;
+}
+
+.itens{
+    margin-left: 1.6rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

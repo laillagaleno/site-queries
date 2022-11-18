@@ -1,0 +1,25 @@
+#svg-map path { 
+    fill:var(--red-200);
+}
+#svg-map text { 
+    fill:#fff; 
+    font:12px Roboto, sans-serif; 
+    cursor:pointer 
+}
+#svg-map a{ 
+    text-decoration:none 
+}
+#svg-map a:hover { 
+    cursor:pointer; 
+    text-decoration:none 
+}
+#svg-map a:hover path{ 
+    fill: var(--red-800); 
+}
+#svg-map .circle { 
+    fill: var(--red-500) 
+}
+#svg-map a:hover .circle { 
+    fill:var(--red-800) !important; 
+    cursor:pointer 
+}

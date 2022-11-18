@@ -1,0 +1,64 @@
+*{
+  margin: 0; 
+  padding: 0; 
+  outline: 0; 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+  border: none;
+  list-style-type: none;
+  list-style: none;
+}
+
+body {
+    background: var(--white);
+    color: var(--gray-800);
+}
+
+html{
+  font: 62.5% Roboto, sans-serif; /*1rem =10px*/
+}
+  
+body, input, button, textarea {
+  font-size: 1.6rem;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+header{
+  background:linear-gradient(93deg,#f6e909, #cc0000);
+}
+
+main{
+  padding: 0 8rem;
+}
+
+  :root{
+    --white:#FFFFFF;
+
+    --gray-50:#F2F2F2;
+    --gray-500:#9CA3AF;
+    --gray-800:#4F4F4F;
+
+    --yellow-400:#F6E909;
+    --red-200:rgb(224, 101, 101);
+    --red-500:#EF4444;
+    --red-800:#cc0000;
+
+    --orange-400:#FFB560;
+    --blue-400:#38BDF8;
+    --green-400:#4ADE80;
+    --green-800:#166534;
+
+  }
