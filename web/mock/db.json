@@ -1,0 +1,87 @@
+{
+    "estados": [
+      { 
+        "id": 1, 
+        "nome": "Maranhao", 
+        "abv": "MA", 
+        "municipios":[
+          {
+            "id": 1,
+            "nome": "ID",
+            "abr":"IT",
+            "spca":[
+              {
+                "anos":[
+                  {
+                    "ano": "2020",
+                    "link":"https://github.com/LucasBassetti/mapa-brasil-svg",
+                    "status":null
+                  },
+                  {
+                    "ano": "2021",
+                    "link":"",
+                    "status":"em"
+                  }
+                ],
+                "status": "em andamento"
+        
+              }
+            ],
+        
+            "virgencia":"verificado",
+            
+            "spce":[
+              {
+                "status":"em analise",
+                "link": ""
+              }
+            ],
+            
+            "obs":"Comentario aqui"
+          }
+        ] 
+      },
+      { 
+        "id": 2, 
+        "nome": "", 
+        "abv": "", 
+        "municipios":[
+          {
+            "id": 1,
+            "nome": "Maranhao",
+            "abr":"MA",
+            "spca":[
+              {
+                "anos":[
+                  {
+                    "ano": "2020",
+                    "link":"https://github.com/LucasBassetti/mapa-brasil-svg",
+                    "status":null
+                  },
+                  {
+                    "ano": "2021",
+                    "link":"",
+                    "status":"em"
+                  }
+                ],
+                "status": "em andamento"
+        
+              }
+            ],
+        
+            "virgencia":"verificado",
+            
+            "spce":[
+              {
+                "status":"em analise",
+                "link": ""
+              }
+            ],
+            
+            "obs":"Comentario aqui"
+          }
+        ] 
+      }
+
+    ]
+}

@@ -23,3 +23,8 @@
     fill:var(--red-800) !important; 
     cursor:pointer 
 }
+
+svg{
+    width: 50rem;
+    height: 50rem;
+}

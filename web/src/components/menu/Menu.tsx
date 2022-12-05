@@ -5,7 +5,7 @@ import logoImg from "../../assets/Logo_PSTU.png"
 export const menuItens =[
     {
         name: "Menu 1",
-        to: '/table',
+        to: '/party',
         isAction: "is-active",
 
     },

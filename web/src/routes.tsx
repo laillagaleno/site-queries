@@ -6,8 +6,8 @@ const Rotas = () =>{
     return(
         <Routes>
             <Route  path="/" element={<Home/>}/>
-            <Route  path="/table" element={<Table/>}/>
-        </Routes>
+            <Route path='/:party/:state' element={<Table/>}/>
+        </Routes> 
     )
 }
 export default Rotas;

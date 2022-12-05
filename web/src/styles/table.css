@@ -4,7 +4,7 @@ table a{
     padding: 0;
 }
 
-table, td, th, tr, a{
+table, td, th, tr, .table a{
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;

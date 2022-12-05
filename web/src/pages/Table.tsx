@@ -1,26 +1,25 @@
+import { useEffect, useState } from 'react'
 import '../styles/table.css'
+import axios from 'axios'
 
 const data =[
   {
     dir: "AL",
 
     spca:[
+       {
+        ano: "2020",
+        link:"https://github.com/LucasBassetti/mapa-brasil-svg",
+      },
       {
-        anos:[
-          {
-            ano: "2020",
-            link:"https://github.com/LucasBassetti/mapa-brasil-svg",
-            status:null
-          },
-          {
-            ano: "2021",
-            link:"",
-            status:"em"
-          },
-        ],
-        status: "em andamento"
+        ano: "2021",
+        link:"",
+      },
+      {
+        ano: null,
+        link:"",
+      },
 
-      }
     ],
 
     virgencia:"verificado",
@@ -34,68 +33,21 @@ const data =[
     
     obs:"Comentario aqui"
   },
-  {
-    dir: "AL",
-
-    spca:[
-      {
-        anos:[
-          {
-            ano: "2020",
-            link:"https://github.com/LucasBassetti/mapa-brasil-svg",
-          },
-          {
-            ano: "2021",
-            link:"",
-          },
-        ],
-        status: "em andamento"
-      }
-    ],
-
-    virgencia:"verificado",
-    
-    spce:[
-      {
-        status:"em analise",
-        link: ""
-      }
-    ]    
-  },
-  {
-    dir: "AL",
-
-    spca:[
-      {
-        anos:[
-          {
-            ano: "2020",
-            link:"https://github.com/LucasBassetti/mapa-brasil-svg",
-            status:null
-          },
-          {
-            ano: "2021",
-            link:"",
-            status:"em"
-          },
-        ],
-        status: "em andamento"
-
-      }
-    ],
-
-    virgencia:"verificado",
-    
-    spce:[
-      {
-        status:"em analise",
-        link: ""
-      }
-    ]    
-  }
 ]
 
 export default function Table() {
+
+  const [dataJson, setData] = useState([]);
+  const url = "http://localhost:3000";
+
+  async function initJson() {
+    await axios.get(url+'estados').then(response => setData(response.data));
+  }
+
+  useEffect(()=>{
+    initJson();
+  },[])
+
     return (
       <>
       <table className="table">
@@ -112,36 +64,38 @@ export default function Table() {
       {data.map((d,index)=>(
           <tr>
               <td className='hover'>{d.dir} </td>
-
               <td>
-                {d.spca.map((spca,index)=>(
-                    <div>
-                      {spca.anos?.map((anos, index)=>(
-                        <td>
-                          <div>
-                            <a href={anos.link}>{anos.ano}</a>  
-                          </div>
-                        </td>
-                      ))}
-                      {spca.status != null ? <td> <div><a href="">{spca.status} </a></div> </td> : ""}
-                    </div>
-                ))}
+                <div>
+                  {d.spca.map((spca,index)=>(
+                    <td>
+                      <div>
+                      <a href={spca.link}> {spca.ano != null ? spca.ano : "Não verificado"}</a>  
+                      </div>
+                    </td>
+                  ))}
+                </div>
               </td>
 
               <td className='hover'>{d.virgencia}</td>
               
               <td>
+                <div>
                 {d.spce.map((spca, i)=>(
-                  <div>
-                    <td><div>
-                    <a href={spca.link}>{spca.status}</a>
-                      
-                      </div></td>
-                  </div>
+                    <td>
+                      <div>
+                        <a href={spca.link}>{spca.status}</a>
+                      </div>
+                    </td>
                 ))}
+                </div>
               </td>
               
-              <td className='hover'>{d.obs}</td>
+              <td className='hover'>
+                {d.obs}
+                
+                <input placeholder='Comentario aqui' type="text"/>
+                <button>0</button>
+              </td>
           </tr>
         ))}
       </tbody>  
